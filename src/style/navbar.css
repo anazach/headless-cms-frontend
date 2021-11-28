@@ -1,0 +1,21 @@
+nav {
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    background-color: rgb(180, 180, 180);
+}
+
+li {
+display: flex;
+padding: 2rem;
+text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(15, 15, 15);
+}
+
+a:hover {
+ color:rgb(0, 0, 0)
+}
