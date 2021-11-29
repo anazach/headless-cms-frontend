@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 import "../../style/contact.css";
 
 const Result = () => {
-  return <p>Message sent!</p>;
+  return <p>Thanks for your message!</p>;
 };
 
 const ContactForm = () => {

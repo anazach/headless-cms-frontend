@@ -27,13 +27,9 @@ const Navbar = () => {
       {menuItem.map((item, i) => (
         <li key={i}>
           {item.title === "Frontpage" ? (
-            <a>
-              <Link to="/">{item.title}</Link>
-            </a>
+            <Link to="/">{item.title}</Link>
           ) : (
-            <a>
-              <Link to={removeSpaceFromString(item.title)}>{item.title}</Link>
-            </a>
+            <Link to={removeSpaceFromString(item.title)}>{item.title}</Link>
           )}
         </li>
       ))}
