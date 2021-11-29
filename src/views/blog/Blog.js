@@ -8,7 +8,7 @@ const Blog = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8888/raite-it/wp-json/wp/v2/posts")
+      .get("http://localhost:8888/wordpress/wp-json/wp/v2/posts")
       .then((res) => {
         setPost(res.data);
         setIsLoaded(true);
