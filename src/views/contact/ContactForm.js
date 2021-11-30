@@ -43,7 +43,7 @@ const ContactForm = () => {
           defer
         ></script>
       </head>
-      <section class="container">
+      <section className="container">
         <form onSubmit={sendEmail} className="form">
             <input
               type="text"
