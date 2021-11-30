@@ -8,11 +8,4 @@ module.exports = function (app) {
       changeOrigin: true,
     })
   );
-  app.use(
-    ["/", "/wpreact", "/raiseit"],
-    createProxyMiddleware({
-      target: "http://localhost",
-      changeOrigin: true,
-    })
-  );
 };
