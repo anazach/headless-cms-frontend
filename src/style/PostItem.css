@@ -1,0 +1,8 @@
+.blog-image {
+  max-width: min(20rem, 100%);
+}
+.blog {
+  width: 30rem;
+  margin: 2rem auto;
+  background-color: blueviolet;
+}

@@ -8,7 +8,7 @@ const Frontpage = () => {
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get(
-        "http://localhost:8888/wordpress/wp-json/wp/v2/pages?slug=frontpage"
+        "http://localhost/raiseit/wordpress/wp-json/wp/v2/pages?slug=frontpage"
       );
       const { acf } = res.data[0];
       console.log(acf);

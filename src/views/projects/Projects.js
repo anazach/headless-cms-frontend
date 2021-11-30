@@ -8,7 +8,7 @@ const Projects = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8888/wordpress/wp-json/wp/v2/projects")
+      .get("http://localhost/raiseit/wordpress/wp-json/wp/v2/projects")
       .then((res) => {
         setProject(res.data);
         setIsLoaded(true);
