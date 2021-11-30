@@ -10,9 +10,7 @@ const ProjectPage = () => {
 
   useEffect(() => {
     async function fetch() {
-      const res = await axios.get(
-        `http://localhost:8888/raite-it/wp-json/wp/v2/projects/${params.id}`
-      );
+      const res = await axios.get(`/wp-json/wp/v2/projects/${params.id}`);
       const data = await res.data;
       setProject(data);
       setIsLoaded(true);

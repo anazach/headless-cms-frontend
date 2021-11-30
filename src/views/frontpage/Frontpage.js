@@ -7,9 +7,7 @@ const Frontpage = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get(
-        "http://localhost:8888/raite-it/wp-json/wp/v2/pages?slug=frontpage"
-      );
+      const res = await axios.get("wp-json/wp/v2/pages?slug=frontpage");
       const { acf } = res.data[0];
       console.log(acf);
       setTitle(acf.title);
