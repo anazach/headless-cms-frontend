@@ -8,9 +8,9 @@ const Navbar = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get(
-        "http://localhost/raiseit/wordpress/wp-json/wp/v2/menu"
-      );
+
+      const response = await axios.get("wp-json/wp/v2/menu");
+
       const items = await response.data;
       setMenuItems(items);
     };
@@ -27,13 +27,9 @@ const Navbar = () => {
       {menuItem.map((item, i) => (
         <li key={i}>
           {item.title === "Frontpage" ? (
-            <a>
-              <Link to="/">{item.title}</Link>
-            </a>
+            <Link to="/">{item.title}</Link>
           ) : (
-            <a>
-              <Link to={removeSpaceFromString(item.title)}>{item.title}</Link>
-            </a>
+            <Link to={removeSpaceFromString(item.title)}>{item.title}</Link>
           )}
         </li>
       ))}

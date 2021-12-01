@@ -7,12 +7,12 @@ const Contact = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost/raiseit/wordpress/wp-json/wp/v2/contact")
-      .then((res) => {
-        setContact(res.data);
-        setIsLoaded(true);
-      });
+
+    axios.get("wp-json/wp/v2/contact").then((res) => {
+      setContact(res.data);
+      setIsLoaded(true);
+    });
+
   }, []);
 
   return (

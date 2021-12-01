@@ -7,12 +7,12 @@ const About = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost/raiseit/wordpress/wp-json/wp/v2/about")
-      .then((res) => {
-        setAbout(res.data);
-        setIsLoaded(true);
-      });
+
+    axios.get("wp-json/wp/v2/about").then((res) => {
+      setAbout(res.data);
+      setIsLoaded(true);
+    });
+
   }, []);
 
   return (

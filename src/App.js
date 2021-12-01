@@ -1,26 +1,30 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/nav/Navbar';
-import Frontpage from './views/frontpage/Frontpage';
-import About from './views/about/About';
-import Projects from './views/projects/Projects'
-import ProjectPage from './views/projects/ProjectPage'
-import ContactPage from './views/contact/ContactPage'
-import Blog from './views/blog/Blog'
-import Career from './views/career/Career'
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/nav/Navbar";
+import Frontpage from "./views/frontpage/Frontpage";
+import Projects from "./views/projects/Projects";
+import ProjectPage from "./views/projects/ProjectPage";
+import Career from "./views/career/Career";
+import About from "./views/about/About";
+import Blog from "./views/blog/Blog";
+import ContactPage from "./views/contact/ContactPage";
+import './tailwind.css'
+import Footer from "./components/nav/footer/Footer";
 
-    const App = () => (
-      <Router>
-        <Navbar/>
-        <Routes>
-          <Route exact path="/" element={<Frontpage/>}/> 
-          <Route  path="/projects" element={<Projects/>}/>
-          <Route  path="/projects/:id" element={<ProjectPage/>}/>
-          <Route exact path="/about" element={<About/>}/> 
-          <Route  path="/contact" element={<ContactPage/>}/>
-          <Route  path="/blog" element={<Blog/>}/>
-          <Route  path="/career" element={<Career/>}/>
-        </Routes>
-      </Router>
-    );
-    export default App;
+const App = () => (
+  <Router>
+    <Navbar />
+    <Routes>
+      <Route exact path="/" element={<Frontpage />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/projects/:id" element={<ProjectPage />} />
+      <Route path="/career" element={<Career />} />
+      <Route exact path="/about" element={<About />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<ContactPage />} />
+    </Routes>
+    <Footer/>
+  </Router>
+
+);
+export default App;

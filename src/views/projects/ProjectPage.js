@@ -5,14 +5,13 @@ import axios from "axios";
 const ProjectPage = () => {
   const [project, setProject] = useState({});
   const [isLoaded, setIsLoaded] = useState(false);
-
   const params = useParams();
 
   useEffect(() => {
     async function fetch() {
-      const res = await axios.get(
-        `http://localhost/raiseit/wp-json/wp/v2/projects/${params.id}`
-      );
+
+      const res = await axios.get(`/wp-json/wp/v2/projects/${params.id}`);
+
       const data = await res.data;
       setProject(data);
       setIsLoaded(true);
