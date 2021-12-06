@@ -9,7 +9,7 @@ const Projects = () => {
   useEffect(() => {
 
 
-    axios.get("wp-json/wp/v2/projects").then((res) => {
+    axios.get("http://localhost:8888/wordpress/wp-json/wp/v2/projects").then((res) => {
       setProject(res.data);
       setIsLoaded(true);
     });

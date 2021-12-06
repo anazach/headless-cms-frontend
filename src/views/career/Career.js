@@ -9,7 +9,7 @@ const Career = () => {
   useEffect(() => {
 
 
-    axios.get("wp-json/wp/v2/career").then((res) => {
+    axios.get("http://localhost:8888/wordpress/wp-json/wp/v2/career").then((res) => {
       setCareer(res.data);
       setIsLoaded(true);
     });
