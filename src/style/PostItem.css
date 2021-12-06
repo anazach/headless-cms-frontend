@@ -1,8 +1,24 @@
 .blog-image {
-  max-width: min(20rem, 100%);
+  max-width: 100%;
+  object-fit: cover;
+  margin: auto;
 }
 .blog {
-  width: 30rem;
+  width: 50rem;
   margin: 2rem auto;
-  background-color: blueviolet;
+  background-color: rgb(213, 189, 236);
+  padding: 1em;
+}
+.blog-title {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
 }
