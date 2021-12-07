@@ -8,7 +8,7 @@ const Contact = () => {
 
   useEffect(() => {
 
-    axios.get("wp-json/wp/v2/contact").then((res) => {
+    axios.get("/wp/wp-json/wp/v2/contact").then((res) => {
       setContact(res.data);
       setIsLoaded(true);
     });
@@ -16,12 +16,14 @@ const Contact = () => {
   }, []);
 
   return (
-    <section>
-      {isLoaded &&
-        contact.map((contact) => {
-          return <ContactItem key={contact.id} contact={contact} />;
-        })}
-    </section>
+    <React.Fragment>
+      <div className="flex flex-row justify-center">
+        {isLoaded &&
+          contact.map((contact) => {
+            return <ContactItem key={contact.id} contact={contact} />;
+          })}
+      </div>
+    </React.Fragment>
   );
 };
 
