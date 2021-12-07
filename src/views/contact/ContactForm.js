@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import emailjs from "emailjs-com";
 
 const Result = () => {
-    return <p className="text-lg text-center mt-1">Thanks for your message!</p>;
+    return <p className="text-lg text-center mt-1">Thank you!</p>;
 };
 
 const ContactForm = () => {

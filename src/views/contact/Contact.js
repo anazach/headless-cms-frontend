@@ -5,10 +5,9 @@ import ContactItem from "./ContactItem";
 const Contact = () => {
   const [contact, setContact] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-
+  
   useEffect(() => {
-
-    axios.get("http://localhost/wpreact/wp-json/wp/v2/contact").then((res) => {
+    axios.get("http://localhost:8888/wp/wp-json/wp/v2/contact").then((res) => {
       setContact(res.data);
       setIsLoaded(true);
     });

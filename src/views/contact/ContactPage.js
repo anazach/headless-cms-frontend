@@ -5,7 +5,7 @@ import Contact from "./Contact";
 const ContactPage = () => {
   return (
     <React.Fragment>
-      <div className="w-full p-20 pb-40 bg-gray-800">
+      <div className="w-full p-20 pb-40 bg-gray-900">
         <ContactForm />
         <Contact />
       </div>

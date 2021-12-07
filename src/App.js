@@ -8,8 +8,8 @@ import Career from "./views/career/Career";
 import About from "./views/about/About";
 import Blog from "./views/blog/Blog";
 import ContactPage from "./views/contact/ContactPage";
+import Footer from "./components/footer/Footer";
 import './tailwind.css'
-import Footer from "./components/nav/footer/Footer";
 
 const App = () => (
   <Router>
