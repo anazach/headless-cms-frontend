@@ -9,7 +9,6 @@ const ContactForm = () => {
     const [result, setResult] = useState(false);
     const sendEmail = (e) => {
         e.preventDefault();
-
         emailjs
             .sendForm(
                 "service_mkolx4j",
@@ -35,8 +34,7 @@ const ContactForm = () => {
 
     return (
         <div className="text-gray-100 px-8 py-12">
-            <div
-                className="max-w-screen-xl mt-24 m-20 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-8 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
+            <div className="max-w-screen-xl mt-24 m-20 px-8 grid gap-8 grid-cols-1 md:grid-cols-2 md:px-12 lg:px-16 xl:px-32 py-8 mx-auto bg-gray-100 text-gray-900 rounded-lg shadow-lg">
                 <div className="flex flex-col justify-between">
                     <h2 className="text-4xl lg:text-5xl font-bold leading-tight text-left mt-8">Contact us</h2>
                     <div className="mt-8 text-center">
@@ -66,7 +64,6 @@ const ContactForm = () => {
         </div>
     )
 }
-
 
 export default ContactForm;
 
