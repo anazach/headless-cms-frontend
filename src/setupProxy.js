@@ -2,9 +2,9 @@ const { createProxyMiddleware } = require("http-proxy-middleware");
 
 module.exports = function (app) {
   app.use(
-    "/wordpress",
+    "wpreact/",
     createProxyMiddleware({
-      target: "http://localhost:8888",
+      target: "http://localhost/",
       changeOrigin: true,
     })
   );

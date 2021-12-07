@@ -9,6 +9,7 @@ import About from "./views/about/About";
 import Blog from "./views/blog/Blog";
 import ContactPage from "./views/contact/ContactPage";
 import './tailwind.css'
+import './App.css'
 import Footer from "./components/nav/footer/Footer";
 
 const App = () => (
@@ -23,7 +24,7 @@ const App = () => (
       <Route path="/blog" element={<Blog />} />
       <Route path="/contact" element={<ContactPage />} />
     </Routes>
-    <Footer/>
+    <Footer/> 
   </Router>
 
 );

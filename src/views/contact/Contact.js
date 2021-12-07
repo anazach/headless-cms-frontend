@@ -7,7 +7,7 @@ const Contact = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios.get("wp-json/wp/v2/contact").then((res) => {
+    axios.get("http://localhost/wpreact/wp-json/wp/v2/contact").then((res) => {
       setContact(res.data);
       setIsLoaded(true);
     });
