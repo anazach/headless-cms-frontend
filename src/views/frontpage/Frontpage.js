@@ -47,11 +47,8 @@ style={
 
 
 
-  <section>
-
-
-
-<div className="container flex lg:flex-row md:flex-col sm:flex-col w-screen mx-auto p-12">
+<section >
+<div className="container flex lg:flex-row md:flex-col sm:flex-col w-screen mx-12 p-12">
 
 <div className="p-24 w-1/2 md:flex-row sm:flex-col items-center">
   <h1 className="mb-12 text-6xl font-bold">Engagerad & certifierad kompetens</h1>
@@ -76,39 +73,42 @@ style={
 
 
 {/* PROJECT SECTION - get projects from API */}
-<section>
 
-<div className="flex lg:flex-row sm:flex-col w-screen items-center justify-around px-24">
+<div>
+
+<div className="p-12"> 
+	<h1 className="font-bold text-5xl">Recent Projects</h1>
+	<a> see all projects </a>
+
+	</div>
+
+
+<div className="flex lg:flex-row sm:flex-col w-screen items-center justify-around px-12">
 
 
 <ProjectCard img={projectImage1} title="Solarwinds Orion"/>
 <ProjectCard img={projectImage1} title="Solarwinds Orion" />
 <ProjectCard img={projectImage1} title="Solarwinds Orion"/>
-<ProjectCard img={projectImage1} title="Solarwinds Orion"/> 
+
 
 
 </div>
-
-</section>
-
-
-
-<section>
+</div>
 
 
 
 
-<div className="container flex flex-col md:flex-col sm:flex-col">
+<div className="p-24 w-screen h-full flex flex-col md:flex-col sm:flex-col">
 
-	<div className=""> 
-	<h1 className="font-bold text-3xl">Contact us</h1>
+	<div className="p-12"> 
+	<h1 className="font-bold text-5xl">Contact us</h1>
 	<p> Do you have questions abour our services? Do not hesitate to contact us. </p>
 	</div>
 
 <div className="flex flex-row">
 
 <div className="flex flex-col justify-items-start">
-<img className="h-72 w-72 rounded-md object-cover" src={person2} alt="" />
+<img className="h-full  w-72 rounded-md object-cover" src={person2} alt="" />
 <h1 className="font-bold text-3xl mt-12">Christina Johansson</h1>
 <p> Consultant Manager</p>
 <p> 0110 701 35 08 </p>
@@ -127,7 +127,7 @@ style={
 
 </div>
 </div>
-</section>
+
 
 
 
