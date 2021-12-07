@@ -10,7 +10,7 @@ const ProjectPage = () => {
   useEffect(() => {
     async function fetch() {
       const res = await axios.get(
-        `http://localhost:8888/wordpress/wp-json/wp/v2/projects/${params.id}`
+        `http://localhost/wpreact/wordpress/wp-json/wp/v2/projects/${params.id}`
       );
       const data = await res.data;
       setProject(data);
