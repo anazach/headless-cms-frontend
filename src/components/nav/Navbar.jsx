@@ -8,7 +8,7 @@ const Navbar = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("http://localhost:8888/wp/wp-json/wp/v2/menu");
+            const response = await axios.get("http://localhost:8888/wordpress/wp-json/wp/v2/menu");
             const items = await response.data;
             setMenuItems(items);
         };

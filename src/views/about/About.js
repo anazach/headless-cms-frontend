@@ -8,7 +8,7 @@ const About = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:8888/wp/wp-json/wp/v2/about").then((res) => {
+    axios.get("http://localhost:8888/wordpress/wp-json/wp/v2/about").then((res) => {
       setAbout(res.data);
       setIsLoaded(true);
     });
