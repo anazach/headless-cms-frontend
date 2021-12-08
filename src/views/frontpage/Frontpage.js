@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import ProjectCard from "../../components/nav/ProjectCard";
+import ProjectCard from "../projects/ProjectCard";
 import projectImage1 from '../../assets/project_card_photo_1.jpeg';
 import person1 from '../../assets/person1.jpg';
 import person2 from '../../assets/person2.jpg';

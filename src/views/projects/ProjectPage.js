@@ -1,30 +1,29 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
 
 const ProjectPage = () => {
-  const [project, setProject] = useState({});
-  const [isLoaded, setIsLoaded] = useState(false);
-  const params = useParams();
 
-  useEffect(() => {
-    async function fetch() {
-      const res = await axios.get(
-        `http://localhost/wpreact/wordpress/wp-json/wp/v2/projects/${params.id}`
-      );
-      const data = await res.data;
-      setProject(data);
-      setIsLoaded(true);
-      console.log(data);
-    }
-    fetch();
-  }, []);
+    const [project, setProject] = useState({})
+    const [isLoaded, setIsload] = useState(false);
 
-  return (
-    <section>
-      {isLoaded ? <h1>{project.title.rendered}</h1> : <p>Not found</p>}
-    </section>
-  );
-};
+    const params = useParams();
 
-export default ProjectPage;
+    useEffect(async () => {
+        const res = await axios.get(`http://localhost/wpreact/wp-json/wp/v2/projects/${params.id}`)
+        const data = await res.data;
+        setProject(data)
+        setIsload(true)
+    }, [])
+
+    return (
+        <div>
+            {
+                isLoaded ? <h1>{project.title.rendered}</h1>
+                    : <p>Not found</p>
+            }
+        </div>
+    )
+}
+
+export default ProjectPage

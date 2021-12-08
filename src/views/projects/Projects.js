@@ -1,28 +1,40 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import ProjectItem from "./ProjectItem";
+import React, {useState, useEffect} from 'react'
+import axios from 'axios';
+import ProjectCard from './ProjectCard';
 
 const Projects = () => {
-  const [project, setProject] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
+
+    const  [projects, setProjects] = useState([])
+    const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
-    axios
-      .get("http://localhost/wpreact/wordpress/wp-json/wp/v2/projects")
-      .then((res) => {
-        setProject(res.data);
-        setIsLoaded(true);
-      });
-  }, []);
+    axios.get('http://localhost/wpreact/wp-json/wp/v2/projects/')
+    .then(res => {
+        setProjects(res.data)
+        setIsLoaded(true)
+        console.log(res)
+        console.log(projects)
+        console.log(isLoaded)
+     
+    })
+  }, [])
 
-  return (
-    <section>
+    return (
+
+      <div className=" h-screen w-full flex justify-around p-12">
       {isLoaded &&
-        project.map((project) => {
-          return <ProjectItem key={project.id} project={project} />;
-        })}
-    </section>
-  );
-};
+        projects.map((project) => {
 
-export default Projects;
+          return (    
+              <div>
+          <ProjectCard key={project.id} id={project.id} title={project.acf.title} description={project.acf.description} image={project.acf.image}  />
+              </div>
+          )
+          
+      
+        })}
+    </div>
+    )
+}
+
+export default Projects
