@@ -1,10 +1,10 @@
-.blog-image {
+/*.blog-image {
   max-width: 100%;
   object-fit: cover;
   margin: auto;
-}
+}*/
 .blog {
-  width: 50rem;
+  width: 70rem;
   margin: 2rem auto;
   background-color: rgb(213, 189, 236);
   padding: 1em;
@@ -17,8 +17,8 @@
   margin-bottom: 0.5em;
 }
 
-.blog-container {
+/*.blog-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1em;
-}
+}*/
