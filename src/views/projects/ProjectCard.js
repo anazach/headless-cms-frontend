@@ -18,8 +18,8 @@ style={
  
         >
           <h3 className="fixed text-3xl font-bold text-white z-50 p-2">{title}</h3>
-          <div className=" relative opacity-0 hover:opacity-80 rounded-md z-0 bg-green-400 w-full h-full">
-          <p>{description}</p>
+          <div className=" relative opacity-0 hover:opacity-90 rounded-md z-0 bg-green-400 w-full h-full">
+          <p className="text-white font-semibold p-8 opcaity-100">{description}</p>
           </div>
      
         </div>

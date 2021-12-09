@@ -21,19 +21,36 @@ const Projects = () => {
 
     return (
 
-      <div className=" h-screen w-full flex justify-around p-12">
+     <div className="">
+  
+     <div className="flex flex-col w-1/2">  
+     <h1 className="text-5xl font-bold"> SELECTED CUSTOMER CASES </h1>
+  
+     </div>
+   
+
+
+     
+      <div className="flex justify-around p-12">
       {isLoaded &&
         projects.map((project) => {
 
           return (    
-              <div>
-          <ProjectCard key={project.id} id={project.id} title={project.acf.title} description={project.acf.description} image={project.acf.image}  />
+              <div className="">
+          <ProjectCard 
+          key={project.id} 
+          id={project.id} 
+          title={project.acf.title} 
+          description={project.acf.description} 
+          image={project.acf.image}  />
               </div>
           )
           
       
         })}
     </div>
+    </div>
+
     )
 }
 
