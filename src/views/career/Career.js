@@ -7,12 +7,10 @@ const Career = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost/wpreact/wp-json/wp/v2/career")
-      .then((res) => {
-        setCareer(res.data);
-        setIsLoaded(true);
-      });
+    axios.get("http://localhost/wpreact/wp-json/wp/v2/career").then((res) => {
+      setCareer(res.data);
+      setIsLoaded(true);
+    });
   }, []);
 
   return (

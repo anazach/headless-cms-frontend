@@ -7,12 +7,10 @@ const Blog = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    axios
-      .get("http://localhost/wpreact/wp-json/wp/v2/posts")
-      .then((res) => {
-        setPost(res.data);
-        setIsLoaded(true);
-      });
+    axios.get("http://localhost/wpreact/wp-json/wp/v2/posts").then((res) => {
+      setPost(res.data);
+      setIsLoaded(true);
+    });
   }, []);
 
   return (
